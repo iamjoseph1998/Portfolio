@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joseph | About</title>
-</head>
-<body>
-    <h1>Hello Visitor! I am Joseph.</h1>
-    <h3><a href="{% url 'app:experience' %}">Link to Joseph's Experience page</a></h3>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+<h1>Hello Visitor!</h1>
+<h2><a href="{% url 'app:experience' %}">Check my experience</a></h2>
+{% endblock %}
