@@ -1,0 +1,55 @@
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+{% endblock %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="{% static 'images/my_icon.svg' %}" alt="" width="50" height="40" class="d-inline-block align-text-top">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.resolver_match.url_name == 'experience' %}active{% endif %}" href="/experience">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Education</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Project</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Certifications</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav sm-icons mr-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fa fa-whatsapp"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
