@@ -1,8 +1,32 @@
 {% extends 'base.html' %}
+{% load static %}
 
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
 {% block title %}About{% endblock %}
 
 {% block content %}
-<h1>Hello Visitor!</h1>
-<h2><a href="{% url 'app:experience' %}">Check my experience</a></h2>
+<div class="container-fluid profile">
+    <div class="row justify-content-center text-center">
+        <img src="{% static 'images/profile1.png' %}" alt="profile">
+        <h1 class="name mt-1">JOSEPH <span class="surname">DSOUZA</span></h1>
+        <div class="col-md-4 mt-3">
+            <h4>
+                <i class="fa-solid fa-house fa-sm"></i>&nbsp;Kolhapur, Maharashtra, India&nbsp;&nbsp;&nbsp;&nbsp;
+            </h4>
+        </div>
+        <div class="col-md-4 mt-3">  
+            <h4>
+                <i class="fa-solid fa-envelope fa-sm"></i><a class="email" href="mailto:iamjoseph1998@gmail.com">&nbsp;iamjoseph1998@gmail.com&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </h4>
+        </div>
+        <div class="col-md-4 mt-3">
+            <h4>
+                <i class="fa-solid fa-phone fa-sm"></i>&nbsp;+91 7887661717&nbsp;&nbsp;&nbsp;
+            </h4>
+        </div>
+    </div>
+    
+</div>
 {% endblock %}

@@ -1,0 +1,47 @@
+.container-fluid{
+    min-height: 80vh;
+}
+
+.profile{
+    background-color: #D6DBDF;
+}
+
+
+.profile img{
+    margin-top: 30px;
+    height: 40vh;
+    width: 43vh;
+    
+}
+
+.row .name{
+    font-size: 17mm;
+    font-weight: 900;
+}
+
+.surname{
+    color: #D4AC0D;
+}
+
+.email{
+    text-decoration: none;
+    color: #343a40;
+}
+
+.email:hover{
+    text-decoration: none;
+    color: #343a40;
+}
+
+
+@media only screen and (max-width: 425px) {
+    .container-fluid {
+        min-height: 90vh;
+    }
+}
+/* 
+@media only screen and (max-width: 1550px) {
+    .container-fluid {
+        height: 84%;
+    }
+} */
