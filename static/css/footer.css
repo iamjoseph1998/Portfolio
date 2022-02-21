@@ -1,6 +1,14 @@
+footer{
+    background-color: #1C2833;
+}
+
 footer h3{
     font-size: medium;
     font-weight: 500;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    margin-bottom: 0%;
+    color: white;
 }
 
 .ft-name{

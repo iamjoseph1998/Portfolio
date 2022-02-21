@@ -3,5 +3,10 @@ html {
 }
 
 body {
-min-height: 100%;
+    min-height: 100%;
+}
+
+.container-fluid{
+    min-height: 80vh;
+    background-color: #D6DBDF;
 }

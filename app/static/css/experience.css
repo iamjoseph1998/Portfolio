@@ -1,0 +1,11 @@
+.head{
+    padding-top: 5vh;
+}
+
+.company{
+    font-style: italic;
+}
+
+.year{
+    text-align: end;
+}

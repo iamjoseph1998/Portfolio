@@ -1,8 +1,24 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/experience.css' %}">
+{% endblock %}
 
 {% block title %}Experience{% endblock %}
 
 {% block content %}
-<h1>This is Joseph's Experience page.</h1>
-<h2><a href="{% url 'app:about' %}">Check about me</a></h2>
+<div class="container">
+    <div class="row head">
+        <div class="col-6 col-xs-6">
+            <h4>Programmer</h4>
+        </div>
+        <div class="col-6 col-xs-6 year">
+            <h5>Oct 2019 - Present</h5>
+        </div>
+    </div>
+    <div class="row">
+        <h5 class="company">Tata Consultancy Services</h5>
+    </div>
+</div>
 {% endblock %}
