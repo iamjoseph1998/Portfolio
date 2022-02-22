@@ -20,12 +20,10 @@
 .year{
     color: #000080;
     text-align: end;
-    font-size: clamp(20px, 5vw, 17px);
 }
 
 .title{
     color: #000080;
-    font-size: clamp(16px, 5vw, 25px);
 }
 
 .desc{

@@ -4,7 +4,6 @@ html {
 
 body {
     min-height: 100%;
-    font-size: clamp(16px, 5vw, 20px);
 }
 
 .container-fluid{
