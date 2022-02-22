@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/projects.css' %}">
+{% endblock %}
+
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+<div class="container content">
+    <div class="row">
+        <h4 class="content-head">PROJECTS</h4>
+    </div>
+    <!--Project-->
+    <div class="row title">
+        <h4>Church Management System <span><a href="https://github.com/iamjoseph1998/Church-Management-System" target="_blank"><i class="fa-brands fa-github fa-lg"></i></a></span></h4>
+    </div>
+    <div class="row">
+        <h5>Technologies involved: Python, Django, MySQL, HTML5, CSS3, Bootstrap, JavaScript, Git</h5>
+    </div>
+    <div class="row desc">
+        <h5>It is developed for both church members and church body to keep family records and manage yearly memberships which were carried out manually in paper format</h5>
+    </div>
+    <!--Project-->
+    <div class="row title">
+        <h4>Portfolio WebApp <span><a href="https://github.com/iamjoseph1998/Portfolio-WebApp" target="_blank"><i class="fa-brands fa-github fa-lg"></i></a></span></h4>
+    </div>
+    <div class="row">
+        <h5>Technologies involved: Python, Django, MySQL, HTML5, CSS3, Bootstrap, JavaScript, Git</h5>
+    </div>
+    <div class="row desc">
+        <h5>It is a simple portfolio which will give all information about myself.</h5>
+    </div>
+</div>
+{% endblock %}

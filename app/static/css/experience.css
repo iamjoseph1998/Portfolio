@@ -1,5 +1,16 @@
+.content{
+    padding-bottom: 5vh;
+}
+
 .head{
     padding-top: 5vh;
+}
+
+.content-head{
+    padding-top: 5vh;
+    font-weight: 400;
+    text-decoration: solid underline #D4AC0D 4px;
+    text-underline-position: under;
 }
 
 .company{

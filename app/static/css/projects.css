@@ -2,10 +2,6 @@
     padding-bottom: 5vh;
 }
 
-.main{
-    padding-top: 5vh;
-}
-
 .content-head{
     padding-top: 5vh;
     font-weight: 400;
@@ -13,16 +9,12 @@
     text-underline-position: under;
 }
 
-.items{
-    padding-top: 2vh;
-}
-
-.heading{
+.title{
+    padding-top: 5vh;
     color: #000080;
 }
 
-@media screen and (max-width: 600px) {
-    .main {
-      width: 100% !important;
-    }
-  }
+.desc{
+    padding-top: 3vh;
+    color: #4D5656;
+}
