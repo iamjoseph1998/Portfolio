@@ -11,6 +11,11 @@ footer h3{
     color: white;
 }
 
-.ft-name{
-    color: #3498DB;
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover{
+    color: white;
 }
