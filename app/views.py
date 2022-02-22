@@ -15,3 +15,6 @@ def skills(request):
 
 def projects(request):
     return render(request, 'app/projects.html')
+
+def certifications(request):
+    return render(request, 'app/certifications.html')

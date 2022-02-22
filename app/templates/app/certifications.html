@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/certifications.css' %}">
+{% endblock %}
+
+{% block title %}Certifications{% endblock %}
+
+{% block content %}
+<div class="container content">
+    <div class="row">
+        <h4 class="content-head">CERTIFICATIONS</h4>
+    </div>
+    <div class="row certification">
+        <h5><li>Web Development using Python and Flask (TCS)</li></h5>
+        <h5><li>RESTful API Development using Python and Flask (TCS)</li></h5>
+    </div>
+</div>
+{% endblock %}

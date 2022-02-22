@@ -30,7 +30,7 @@
                     <a class="nav-link {% if request.resolver_match.url_name == 'projects' %}active{% endif %}" href="/projects">PROJECTS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">CERTIFICATIONS</a>
+                    <a class="nav-link {% if request.resolver_match.url_name == 'certifications' %}active{% endif %}" href="/certifications">CERTIFICATIONS</a>
                 </li>
             </ul>
             <ul class="navbar-nav sm-icons mr-0">
