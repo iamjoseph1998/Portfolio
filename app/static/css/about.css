@@ -25,14 +25,14 @@
 }
 
 
-@media only screen and (max-width: 425px) {
-    .container-fluid {
-        min-height: 90vh;
+@media screen and (max-width: 1199px) {
+    .col-md-4 {
+      width: 100% !important;
     }
-}
-/* 
-@media only screen and (max-width: 1550px) {
-    .container-fluid {
-        height: 84%;
+    .col-md-3 {
+        width: 100% !important;
     }
-} */
+    .col-md-5 {
+    width: 100% !important;
+    }
+  }

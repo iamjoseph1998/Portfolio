@@ -24,7 +24,7 @@
                     <a class="nav-link {% if request.resolver_match.url_name == 'education' %}active{% endif %}" href="/education">EDUCATION</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">SKILLS</a>
+                    <a class="nav-link {% if request.resolver_match.url_name == 'skills' %}active{% endif %}" href="/skills">SKILLS</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">PROJECTS</a>

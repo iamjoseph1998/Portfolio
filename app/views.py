@@ -9,3 +9,6 @@ def experience(request):
 
 def education(request):
     return render(request, 'app/education.html')
+
+def skills(request):
+    return render(request, 'app/skills.html')

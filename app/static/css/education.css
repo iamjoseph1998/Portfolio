@@ -2,7 +2,12 @@
     padding-top: 5vh;
 }
 
+.title{
+    color: #000080;
+}
+
 .year{
+    color: #000080;
     text-align: end;
     font-size: 23px;
 }
@@ -12,5 +17,5 @@
 }
 
 .score{
-    padding-top: 2vh;
+    padding-top: 3vh;
 }
