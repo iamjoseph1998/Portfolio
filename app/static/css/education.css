@@ -1,0 +1,16 @@
+.main{
+    padding-top: 5vh;
+}
+
+.year{
+    text-align: end;
+    font-size: 23px;
+}
+
+.university{
+    font-style: italic;
+}
+
+.score{
+    padding-top: 2vh;
+}

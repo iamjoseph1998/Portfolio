@@ -21,7 +21,7 @@
                     <a class="nav-link {% if request.resolver_match.url_name == 'experience' %}active{% endif %}" href="/experience">EXPERIENCE</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">EDUCATION</a>
+                    <a class="nav-link {% if request.resolver_match.url_name == 'education' %}active{% endif %}" href="/education">EDUCATION</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">SKILLS</a>

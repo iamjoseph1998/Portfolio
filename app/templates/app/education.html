@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/education.css' %}">
+{% endblock %}
+
+{% block title %}Education{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row main">
+        <!--Master-->
+        <div class="col-6 col-xs-6">
+            <h4 class="title">Master's in Computer Science</h4>
+        </div>
+        <div class="col-6 col-xs-6">
+            <h4 class="year">2019 - 2021</h4>
+        </div>
+    </div>
+    <div class="row">
+        <h5 class="university">Savitribai Phule Pune University</h5>
+    </div>
+    <div class="row">
+        <h6 class="score">Percentage: 74.60%</h6>
+    </div>
+    <!--Bachelor-->
+    <div class="row main">
+        <div class="col-6 col-xs-6">
+            <h4 class="title">Bachelor's in Computer Science</h4>
+        </div>
+        <div class="col-6 col-xs-6">
+            <h4 class="year">2016 - 2019</h4>
+        </div>
+    </div>
+    <div class="row">
+        <h5 class="university">Shivaji University Kolhapur</h5>
+    </div>
+    <div class="row">
+        <h6 class="score">Percentage: 63.00%</h6>
+    </div>
+</div>
+{% endblock %}

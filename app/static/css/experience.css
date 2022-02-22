@@ -8,4 +8,9 @@
 
 .year{
     text-align: end;
+    font-size: clamp(16px, 5vw, 20px);
+}
+
+.title{
+    font-size: clamp(16px, 5vw, 25px);
 }
