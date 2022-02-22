@@ -18,17 +18,6 @@
     color: #D4AC0D;
 }
 
-.email{
-    text-decoration: none;
-    color: #343a40;
-}
-
-.email:hover{
-    text-decoration: none;
-    color: #343a40;
-}
-
-
 @media screen and (max-width: 1199px) {
     .col-md-4 {
       width: 100% !important;
