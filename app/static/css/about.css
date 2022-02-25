@@ -12,6 +12,7 @@
 .row .name{
     font-size: 17mm;
     font-weight: 900;
+    text-transform: uppercase;
 }
 
 .surname{

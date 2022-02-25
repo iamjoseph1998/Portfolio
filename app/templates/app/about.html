@@ -10,20 +10,20 @@
 <div class="container content">
     <div class="row profile justify-content-center text-center">
         <img src="{% static 'images/profile1.png' %}" alt="profile">
-        <h1 class="name mt-1">JOSEPH <span class="surname">DSOUZA</span></h1>
+        <h1 class="name mt-1">{{ about_data.first_name }} <span class="surname">{{ about_data.last_name }}</span></h1>
         <div class="col-md-4 mt-3">  
             <h4>
-                <i class="fa-solid fa-envelope fa-sm"></i>&nbsp;iamjoseph1998@gmail.com
-            </h4>
-        </div>
-        <div class="col-md-3 mt-3">
-            <h4>
-                <i class="fa-solid fa-phone fa-sm"></i>&nbsp;+91 7887661717
+                <i class="fa-solid fa-envelope fa-sm"></i>&nbsp;{{ about_data.email }}
             </h4>
         </div>
         <div class="col-md-5 mt-3">
             <h4>
-                <i class="fa-solid fa-house fa-sm"></i>&nbsp;Kolhapur, Maharashtra, India
+                <i class="fa-solid fa-house fa-sm"></i>&nbsp;{{ about_data.address }}
+            </h4>
+        </div>
+        <div class="col-md-3 mt-3">
+            <h4>
+                <i class="fa-solid fa-phone fa-sm"></i>&nbsp;{{ about_data.mobile }}
             </h4>
         </div>
     </div>

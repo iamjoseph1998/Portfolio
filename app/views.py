@@ -1,20 +1,54 @@
+from unicodedata import name
 from django.shortcuts import render
+from . import models
 
 # Create your views here.
 def about(request):
-    return render(request, 'app/about.html')
+
+    about_data = models.About.objects.get(id=1)
+
+    context = {'about_data': about_data}
+
+    return render(request, 'app/about.html', context=context)
 
 def experience(request):
-    return render(request, 'app/experience.html')
+
+    about_data = models.About.objects.get(id=1)
+
+    context = {'about_data': about_data}
+
+    return render(request, 'app/experience.html', context=context)
 
 def education(request):
-    return render(request, 'app/education.html')
+
+    about_data = models.About.objects.get(id=1)
+
+    edu_data = models.Education.objects.all()
+
+    context = {'about_data': about_data, 'edu_data': edu_data}
+
+    return render(request, 'app/education.html', context=context)
 
 def skills(request):
-    return render(request, 'app/skills.html')
+
+    about_data = models.About.objects.get(id=1)
+
+    context = {'about_data': about_data}
+
+    return render(request, 'app/skills.html', context=context)
 
 def projects(request):
-    return render(request, 'app/projects.html')
+
+    about_data = models.About.objects.get(id=1)
+
+    context = {'about_data': about_data}
+
+    return render(request, 'app/projects.html', context=context)
 
 def certifications(request):
-    return render(request, 'app/certifications.html')
+
+    about_data = models.About.objects.get(id=1)
+
+    context = {'about_data': about_data}
+
+    return render(request, 'app/certifications.html', context=context)
