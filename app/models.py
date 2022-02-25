@@ -6,7 +6,7 @@ from phonenumber_field.modelfields import PhoneNumberField
 class About(models.Model):
     first_name = models.CharField(max_length=20)
     last_name = models.CharField(max_length=20)
-    mobile = PhoneNumberField(unique=True, max_length=10)
+    mobile = PhoneNumberField(unique=True, max_length=13)
     email = models.EmailField(max_length=70, unique=True)
     address = models.CharField(max_length=150)
     github_link = models.CharField(max_length=150)
