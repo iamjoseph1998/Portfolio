@@ -1,6 +1,8 @@
+from datetime import datetime
 from enum import unique
 from django.db import models
 from phonenumber_field.modelfields import PhoneNumberField
+from django.core.exceptions import ValidationError
 
 # Create your models here.
 class About(models.Model):
@@ -14,6 +16,10 @@ class About(models.Model):
 
     def __str__(self):
         return f'{self.first_name} {self.last_name}'
+
+    def clean(self):
+        if (About.objects.count() >= 1 and self.pk is None):
+            raise ValidationError("Can only create one Profile instances. Try editing/removing one of the existing instances.")
 
 class Experience(models.Model):
     designation = models.CharField(max_length=100)
@@ -32,10 +38,16 @@ class Education(models.Model):
     percentage = models.FloatField()
     current_pursuing = models.BooleanField(default=False)
     start_date = models.DateField()
-    end_date = models.DateField()
+    end_date = models.DateField(null=True, blank=True)
 
     def __str__(self):
         return f'{self.degree_name}'
+
+    def start_year(self):
+        return self.start_date.strftime('%Y')
+
+    def end_year(self):
+        return self.end_date.strftime('%Y')
 
 class Skill(models.Model):
     category = models.CharField(max_length=50)

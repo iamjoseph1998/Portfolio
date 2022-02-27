@@ -1,6 +1,7 @@
 from unicodedata import name
 from django.shortcuts import render
 from . import models
+import datetime
 
 # Create your views here.
 def about(request):
@@ -13,7 +14,7 @@ def about(request):
 
 def experience(request):
 
-    about_data = models.About.objects.get(id=1)
+    about_data = models.About.objects.all()
 
     context = {'about_data': about_data}
 
@@ -23,9 +24,9 @@ def education(request):
 
     about_data = models.About.objects.get(id=1)
 
-    edu_data = models.Education.objects.all()
+    edu_data = models.Education.objects.order_by('-end_date')
 
-    context = {'about_data': about_data, 'edu_data': edu_data}
+    context = {'about_data': about_data, 'edu_data': edu_data,}
 
     return render(request, 'app/education.html', context=context)
 
