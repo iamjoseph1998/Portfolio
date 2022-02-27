@@ -15,8 +15,9 @@ def about(request):
 def experience(request):
 
     about_data = models.About.objects.all()
+    exp_data = models.Experience.objects.order_by('-end_date')
 
-    context = {'about_data': about_data}
+    context = {'about_data': about_data, 'exp_data': exp_data}
 
     return render(request, 'app/experience.html', context=context)
 

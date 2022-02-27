@@ -12,21 +12,23 @@
     <div class="row">
         <h4 class="content-head">EXPERIENCE</h4>
     </div>
+    {% for exp in exp_data %}
     <div class="row head">
         <div class="col-6 col-xs-6">
-            <h5 class="title">Programmer</h5>
+            <h5 class="title">{{ exp.designation }}</h5>
         </div>
         <div class="col-6 col-xs-6">
-            <h5 class="year">Oct 2019 - Present</h5>
+            <h5 class="year">{{ exp.joined }} - {% if exp.current_working %}Present{% else %}{{ exp.resigned }}{% endif %}</h5>
         </div>
     </div>
     <div class="row">
-        <h5 class="company">Tata Consultancy Services</h5>
+        <h5 class="company">{{ exp.company_name }}</h5>
     </div>
     <div class="row desc">
         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium enim nobis inventore aspernatur architecto quisquam ab blanditiis ea corrupti exercitationem consequuntur, explicabo voluptate tenetur perferendis, hic illo voluptas porro a?
+            {{ exp.description }}
         </p>
     </div>
+    {% endfor %}
 </div>
 {% endblock %}

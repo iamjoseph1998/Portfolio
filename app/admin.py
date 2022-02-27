@@ -6,6 +6,7 @@ from app.models import About, Certification, Education, Experience, Project, Ski
 @admin.register(About)
 class AboutAdmin(admin.ModelAdmin):
     list_display = ('id', 'first_name', 'last_name', 'mobile', 'email', 'address')
+    list_display_links = ('id', 'first_name', 'last_name')
 
     def has_add_permission(self, request):
         return False
@@ -13,7 +14,9 @@ class AboutAdmin(admin.ModelAdmin):
     def has_delete_permission(self, request, obj=None):
         return False
 
-admin.site.register(Experience)
+@admin.register(Experience)
+class ExperienceAdmin(admin.ModelAdmin):
+    list_display = ('designation', 'company_name', 'current_working', 'joined')
 
 @admin.register(Education)
 class EducationAdmin(admin.ModelAdmin):

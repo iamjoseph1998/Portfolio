@@ -31,6 +31,12 @@ class Experience(models.Model):
 
     def __str__(self):
         return f'{self.designation} at {self.company_name}'
+    
+    def joined(self):
+        return self.join_date.strftime('%b, %Y')
+
+    def resigned(self):
+        return self.end_date.strftime('%b, %Y')
 
 class Education(models.Model):
     degree_name = models.CharField(max_length=200, unique=True)
