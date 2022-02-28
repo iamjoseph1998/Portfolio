@@ -67,6 +67,7 @@ class Project(models.Model):
     proj_github_link = models.CharField(max_length=200, unique=True)
     tech_used = models.TextField()
     description = models.TextField()
+    currently_working = models.BooleanField(default=False)
 
     def __str__(self):
         return f'{self.project_name}'
