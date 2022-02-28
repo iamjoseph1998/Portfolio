@@ -13,3 +13,12 @@
     padding-top: 5vh;
     color: #424949;
 }
+
+.certification li{
+    position: relative;
+    list-style-type: none;
+}
+
+.certification li i{
+    padding-right: 10px;
+}

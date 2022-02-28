@@ -13,8 +13,15 @@
         <h4 class="content-head">CERTIFICATIONS</h4>
     </div>
     <div class="row certification">
-        <h5><li>Web Development using Python and Flask (TCS)</li></h5>
-        <h5><li>RESTful API Development using Python and Flask (TCS)</li></h5>
+        {% if cert_data %}
+        <ul>
+            {% for cert in cert_data %}
+            <h5><li><span><i class="fa-solid fa-award"></i></span>{{ cert.certificate_name }}</h5></li>
+            {% endfor %}
+        </ul>
+        {% else %}
+            <h5>No certifications done yet!</h5>
+        {% endif %}
     </div>
 </div>
 {% endblock %}

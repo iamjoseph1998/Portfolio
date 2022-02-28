@@ -73,7 +73,7 @@ class Project(models.Model):
         return f'{self.project_name}'
 
 class Certification(models.Model):
-    certi_name = models.CharField(max_length=200, unique=True)
+    certificate_name = models.CharField(max_length=200, unique=True)
 
     def __str__(self):
-        return f'{self.certi_name}'
+        return f'{self.certificate_name}'

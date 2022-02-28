@@ -3,7 +3,8 @@ from django.shortcuts import render
 from . import models
 import datetime
 
-# Create your views here.
+
+# About
 def about(request):
 
     about_data = models.About.objects.get(id=1)
@@ -12,6 +13,9 @@ def about(request):
 
     return render(request, 'app/about.html', context=context)
 
+
+
+# Experience
 def experience(request):
 
     about_data = models.About.objects.all()
@@ -21,6 +25,9 @@ def experience(request):
 
     return render(request, 'app/experience.html', context=context)
 
+
+
+# Education
 def education(request):
 
     about_data = models.About.objects.get(id=1)
@@ -31,6 +38,9 @@ def education(request):
 
     return render(request, 'app/education.html', context=context)
 
+
+
+# Skills
 def skills(request):
 
     about_data = models.About.objects.get(id=1)
@@ -39,6 +49,9 @@ def skills(request):
 
     return render(request, 'app/skills.html', context=context)
 
+
+
+# Projects
 def projects(request):
 
     about_data = models.About.objects.get(id=1)
@@ -47,10 +60,15 @@ def projects(request):
 
     return render(request, 'app/projects.html', context=context)
 
+
+
+
+# Certifications
 def certifications(request):
 
     about_data = models.About.objects.get(id=1)
+    cert_data = models.Certification.objects.all()
 
-    context = {'about_data': about_data}
+    context = {'about_data': about_data, 'cert_data': cert_data}
 
     return render(request, 'app/certifications.html', context=context)

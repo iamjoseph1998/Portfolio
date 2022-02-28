@@ -20,7 +20,7 @@ class ExperienceAdmin(admin.ModelAdmin):
 
 @admin.register(Education)
 class EducationAdmin(admin.ModelAdmin):
-    list_display = ('degree_name', 'university', 'percentage', 'current_pursuing', 'start_year', 'end_year')
+    list_display = ('degree_name', 'university', 'percentage', 'start_year', 'end_year', 'current_pursuing')
 
     def render_change_form(self, request, context, *args, **kwargs):
         form_instance = context['adminform'].form
@@ -33,4 +33,9 @@ class EducationAdmin(admin.ModelAdmin):
 
 admin.site.register(Skill)
 admin.site.register(Project)
-admin.site.register(Certification)
+
+
+@admin.register(Certification)
+class CertificationAdmin(admin.ModelAdmin):
+    list_display = ('id', 'certificate_name')
+    list_display_links = ('id', 'certificate_name')
