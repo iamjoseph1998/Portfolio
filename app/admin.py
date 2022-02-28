@@ -2,7 +2,7 @@ from django.contrib import admin
 
 from app.models import About, Certification, Education, Experience, Project, Skill
 
-# Register your models here.
+# AboutAdmin
 @admin.register(About)
 class AboutAdmin(admin.ModelAdmin):
     list_display = ('id', 'first_name', 'last_name', 'mobile', 'email', 'address')
@@ -14,10 +14,16 @@ class AboutAdmin(admin.ModelAdmin):
     def has_delete_permission(self, request, obj=None):
         return False
 
+
+
+# ExperienceAdmin
 @admin.register(Experience)
 class ExperienceAdmin(admin.ModelAdmin):
     list_display = ('designation', 'company_name', 'current_working', 'joined')
 
+
+
+# EducationAdmin
 @admin.register(Education)
 class EducationAdmin(admin.ModelAdmin):
     list_display = ('degree_name', 'university', 'percentage', 'start_year', 'end_year', 'current_pursuing')
@@ -32,9 +38,18 @@ class EducationAdmin(admin.ModelAdmin):
         return super().render_change_form(request, context, *args, **kwargs)
 
 admin.site.register(Skill)
-admin.site.register(Project)
 
 
+
+# ProjectAdmin
+@admin.register(Project)
+class ProjectAdmin(admin.ModelAdmin):
+    list_display = ('id', 'project_name', 'proj_github_link', 'currently_working')
+    list_display_links = ('id', 'project_name')
+
+
+
+# CertificationAdmin
 @admin.register(Certification)
 class CertificationAdmin(admin.ModelAdmin):
     list_display = ('id', 'certificate_name')

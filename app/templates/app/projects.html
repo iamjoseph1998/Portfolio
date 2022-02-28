@@ -13,17 +13,25 @@
         <h4 class="content-head">PROJECTS</h4>
     </div>
     <!--Project-->
-    <div class="row title">
-        <h5>Church Management System <span><a href="https://github.com/iamjoseph1998/Church-Management-System" target="_blank"><i class="fa-brands fa-github fa-lg"></i></a></span></h5>
-    </div>
-    <div class="row">
-        <h5>Technologies involved: Python, Django, MySQL, HTML5, CSS3, Bootstrap, JavaScript, Git</h5>
-    </div>
-    <div class="row desc">
-        <h5>It is developed for both church members and church body to keep family records and manage yearly memberships which were carried out manually in paper format</h5>
-    </div>
+    {% if proj_data %}
+        {% for proj in proj_data %}
+        <div class="row title">
+            <h5>{{ proj.project_name }} {% if proj.currently_working %} ( In progress ){% endif %} {% if proj.proj_github_link %}<span><a href="{{ proj.proj_github_link }}" target="_blank"><i class="fa-brands fa-github fa-lg"></i></a></span>{% endif %}</h5>
+        </div>
+        <div class="row">
+            <h5>Technology used: {{ proj.tech_used }}</h5>
+        </div>
+        <div class="row desc">
+            <h5>{{ proj.description }}</h5>
+        </div>
+        {% endfor %}
+    {% else %}
+        <div class="row title">
+            <h5>No projects to display!</h5>
+        </div>
+    {% endif %}
     <!--Project-->
-    <div class="row title">
+    {% comment %} <div class="row title">
         <h5>Portfolio WebApp <span><a href="https://github.com/iamjoseph1998/Portfolio-WebApp" target="_blank"><i class="fa-brands fa-github fa-lg"></i></a></span></h5>
     </div>
     <div class="row">
@@ -31,6 +39,6 @@
     </div>
     <div class="row desc">
         <h5>It is a simple portfolio which will give all information about myself.</h5>
-    </div>
+    </div> {% endcomment %}
 </div>
 {% endblock %}

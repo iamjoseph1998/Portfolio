@@ -64,7 +64,7 @@ class Skill(models.Model):
 
 class Project(models.Model):
     project_name = models.CharField(max_length=150)
-    proj_github_link = models.CharField(max_length=200, unique=True)
+    proj_github_link = models.CharField(max_length=200, unique=True, blank=True, null=True)
     tech_used = models.TextField()
     description = models.TextField()
     currently_working = models.BooleanField(default=False)

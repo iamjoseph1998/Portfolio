@@ -55,8 +55,9 @@ def skills(request):
 def projects(request):
 
     about_data = models.About.objects.get(id=1)
+    proj_data = models.Project.objects.all()
 
-    context = {'about_data': about_data}
+    context = {'about_data': about_data, 'proj_data': proj_data}
 
     return render(request, 'app/projects.html', context=context)
 
