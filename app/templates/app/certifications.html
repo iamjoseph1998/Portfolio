@@ -16,7 +16,14 @@
         {% if cert_data %}
         <ul>
             {% for cert in cert_data %}
-            <h5><li><span><i class="fa-solid fa-award"></i></span>{{ cert.certificate_name }}</h5></li>
+            <h5>
+                <li>
+                    <span>
+                        <i class="fa-solid fa-award"></i>
+                    </span>
+                    {{ cert.certificate_name }}
+                </li>
+            </h5>
             {% endfor %}
         </ul>
         {% else %}

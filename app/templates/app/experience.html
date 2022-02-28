@@ -18,7 +18,11 @@
             <h5 class="title">{{ exp.designation }}</h5>
         </div>
         <div class="col-6 col-xs-6">
-            <h5 class="year">{{ exp.joined }} - {% if exp.current_working %}Present{% else %}{{ exp.resigned }}{% endif %}</h5>
+            <h5 class="year">{{ exp.joined }} - 
+                {% if exp.current_working %}Present
+                {% else %}{{ exp.resigned }}
+                {% endif %}
+            </h5>
         </div>
     </div>
     <div class="row">

@@ -16,7 +16,17 @@
     {% if proj_data %}
         {% for proj in proj_data %}
         <div class="row title">
-            <h5>{{ proj.project_name }} {% if proj.currently_working %} ( In progress ){% endif %} {% if proj.proj_github_link %}<span><a href="{{ proj.proj_github_link }}" target="_blank"><i class="fa-brands fa-github fa-lg"></i></a></span>{% endif %}</h5>
+            <h5>{{ proj.project_name }} 
+                {% if proj.currently_working %} ( In progress )
+                {% endif %} 
+                {% if proj.proj_github_link %}
+                    <span>
+                        <a href="{{ proj.proj_github_link }}" target="_blank">
+                            <i class="fa-brands fa-github fa-lg"></i>
+                        </a>
+                    </span>
+                {% endif %}
+            </h5>
         </div>
         <div class="row">
             <h5>Technology used: {{ proj.tech_used }}</h5>
@@ -30,15 +40,5 @@
             <h5>No projects to display!</h5>
         </div>
     {% endif %}
-    <!--Project-->
-    {% comment %} <div class="row title">
-        <h5>Portfolio WebApp <span><a href="https://github.com/iamjoseph1998/Portfolio-WebApp" target="_blank"><i class="fa-brands fa-github fa-lg"></i></a></span></h5>
-    </div>
-    <div class="row">
-        <h5>Technologies involved: Python, Django, MySQL, HTML5, CSS3, Bootstrap, JavaScript, Git</h5>
-    </div>
-    <div class="row desc">
-        <h5>It is a simple portfolio which will give all information about myself.</h5>
-    </div> {% endcomment %}
 </div>
 {% endblock %}

@@ -18,7 +18,11 @@
             <h5 class="title">{{ degree.degree_name }}</h5>
         </div>
         <div class="col-6 col-xs-6">
-            <h5 class="year">{{ degree.start_year }} - {% if degree.current_pursuing %}Present{% else %}{{ degree.end_year }}{% endif %}</h5>
+            <h5 class="year">{{ degree.start_year }} - 
+                {% if degree.current_pursuing %}Present
+                {% else %}{{ degree.end_year }}
+                {% endif %}
+            </h5>
         </div>
     </div>
     <div class="row">
