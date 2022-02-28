@@ -56,7 +56,14 @@ class Education(models.Model):
         return self.end_date.strftime('%Y')
 
 class Skill(models.Model):
-    category = models.CharField(max_length=50)
+    cat_choices = (
+        ("Programming Languages", "Programming Languages"),
+        ("Frameworks", "Frameworks"),
+        ("Frontend Technology", "Frontend Technology"),
+        ("Database Technology", "Database Technology"),
+        ("Source Control", "Source Control"),
+    )
+    category = models.CharField(max_length=50, choices=cat_choices)
     skill = models.CharField(max_length=50, unique=True)
 
     def __str__(self):

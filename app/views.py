@@ -44,8 +44,13 @@ def education(request):
 def skills(request):
 
     about_data = models.About.objects.get(id=1)
+    skill_data = models.Skill.objects.all()
+    category_list = []
+    for item in skill_data:
+        if item.category not in category_list:
+            category_list.append(item.category)
 
-    context = {'about_data': about_data}
+    context = {'about_data': about_data, 'category_list': category_list, 'skill_data': skill_data}
 
     return render(request, 'app/skills.html', context=context)
 

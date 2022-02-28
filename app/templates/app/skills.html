@@ -14,44 +14,18 @@
     </div>
     <div class="row">
         <!--Languages-->
+        {% for category in category_list %}
         <div class="col-4 main">
-            <h5 class="heading">Programming Languages</h5>
+            <h5 class="heading">{{ category }}</h5>
             <div class="row items">
-                <h5>Python</h5>
+                {% for skill in skill_data %}
+                    {% if skill.category == category %}
+                        <h5>{{ skill.skill }}</h5>
+                    {% endif %}
+                {% endfor %}
             </div>
         </div>
-        <!--Framework-->
-        <div class="col-4 main">
-            <h5 class="heading">Frameworks</h5>
-            <div class="row items">
-                <h5>Django</h5>
-                <h5>Flask</h5>
-                <h5>Bootstrap</h5>
-            </div>
-        </div>
-        <!--Frontend-->
-        <div class="col-4 main">
-            <h5 class="heading">Frontend Technology</h5>
-            <div class="row items">
-                <h5>HTML5</h5>
-                <h5>CSS3</h5>
-                <h5>JavaScript</h5>
-            </div>
-        </div>
-        <!--Database-->
-        <div class="col-4 main">
-            <h5 class="heading">Database Technology</h5>
-            <div class="row items">
-                <h5>MySQL</h5>
-            </div>
-        </div>
-        <!--Source Control-->
-        <div class="col-4 main">
-            <h5 class="heading">Source Control</h5>
-            <div class="row items">
-                <h5>Git</h5>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </div>
 {% endblock %}

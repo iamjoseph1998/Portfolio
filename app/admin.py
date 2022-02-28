@@ -37,8 +37,10 @@ class EducationAdmin(admin.ModelAdmin):
         form_instance.fields['end_date'].widget.attrs['placeholder'] = 'yyyy-mm-dd'
         return super().render_change_form(request, context, *args, **kwargs)
 
-admin.site.register(Skill)
-
+@admin.register(Skill)
+class SkillAdmin(admin.ModelAdmin):
+    list_display = ('id', 'skill', 'category')
+    list_display_links = ('id', 'skill')
 
 
 # ProjectAdmin
