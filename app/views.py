@@ -18,8 +18,8 @@ def about(request):
 # Experience
 def experience(request):
 
-    about_data = models.About.objects.all()
-    exp_data = models.Experience.objects.order_by('-end_date')
+    about_data = models.About.objects.get(id=1)
+    exp_data = models.Experience.objects.order_by('end_date')
 
     context = {'about_data': about_data, 'exp_data': exp_data}
 
